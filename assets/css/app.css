@@ -72,10 +72,11 @@ a {
 /* MAIN SECTION */
 main {
   display: flex;
+  flex-wrap: wrap;
   height: 90vh;
 }
 .box {
-  width: 50%;
+  width: 100%;
   padding: 48px;
 }
 
@@ -213,4 +214,10 @@ footer {
 
 .hide {
   display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .box {
+    width: 50%;
+  }
 }
