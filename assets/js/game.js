@@ -1,3 +1,20 @@
+const modal = document.querySelector(".modal-overlay");
+const closeBtn = document.querySelector(".close-modal-btn");
+
+function openModal() {
+  modal.classList.remove("hide");
+}
+
+function closeModal(e, clickedOutside) {
+  if (clickedOutside) {
+    if (e.target.classList.contains("modal-overlay"))
+      modal.classList.add("hide");
+  } else modal.classList.add("hide");
+}
+
+modal.addEventListener("click", (e) => closeModal(e, true));
+closeBtn.addEventListener("click", closeModal);
+
 // DOM MANIPULATION VARIABLES
 const sketchBox = document.getElementById("sketchBox");
 const grid16Btn = document.getElementById("16grid");
@@ -5,6 +22,11 @@ const grid24Btn = document.getElementById("24grid");
 const grid32Btn = document.getElementById("32grid");
 const grid48Btn = document.getElementById("48grid");
 const grid64Btn = document.getElementById("64grid");
+const grid16BtnModal = document.getElementById("16gridModal");
+const grid24BtnModal = document.getElementById("24gridModal");
+const grid32BtnModal = document.getElementById("32gridModal");
+const grid48BtnModal = document.getElementById("48gridModal");
+const grid64BtnModal = document.getElementById("64gridModal");
 const clearBtn = document.getElementById("clearBtn");
 
 let gridSize = 16;
@@ -36,6 +58,38 @@ grid64Btn.addEventListener("click", () => {
   gridSize = 64;
   resetGrid();
   createGrid(gridSize);
+});
+grid16BtnModal.addEventListener("click", () => {
+  gridSize = 16;
+  resetGrid();
+  createGrid(gridSize);
+  closeModal();
+});
+
+grid24BtnModal.addEventListener("click", () => {
+  gridSize = 24;
+  resetGrid();
+  createGrid(gridSize);
+  closeModal();
+});
+
+grid32BtnModal.addEventListener("click", () => {
+  gridSize = 32;
+  resetGrid();
+  createGrid(gridSize);
+  closeModal();
+});
+grid48BtnModal.addEventListener("click", () => {
+  gridSize = 48;
+  resetGrid();
+  createGrid(gridSize);
+  closeModal();
+});
+grid64BtnModal.addEventListener("click", () => {
+  gridSize = 64;
+  resetGrid();
+  createGrid(gridSize);
+  closeModal();
 });
 
 clearBtn.addEventListener("click", () => {

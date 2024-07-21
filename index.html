@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/utilities.css" />
     <link rel="stylesheet" href="./assets/css/fonts.css" />
     <link rel="stylesheet" href="./assets/css/app.css" />
+    <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon" />
   </head>
   <body>
     <header class="header">
@@ -60,6 +61,28 @@
       </section>
     </header>
     <main>
+      <div class="musicPlayer">
+        <button id="musicBtn">
+          <img src="./img/music.svg" alt="" id="musicImage" />
+        </button>
+      </div>
+      <div class="modal-overlay">
+        <div class="modal-wrapper">
+          <div class="close-btn-wrapper">
+            <button class="close-modal-btn">&#10540;</button>
+          </div>
+          <div class="modal-content">
+            <h1>Which grid would you like to start with?</h1>
+            <div class="gridSizeBtns mb-sm">
+              <button id="16gridModal">16 X 16</button>
+              <button id="24gridModal">24 X 24</button>
+              <button id="32gridModal">32 X 32</button>
+              <button id="48gridModal">48 X 48</button>
+              <button id="64gridModal">64 X 64</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <section class="box settingsBox">
         <h2 class="mb-sm">Settings</h2>
         <div class="gridSizeBtns mb-sm">
@@ -85,7 +108,8 @@
           curriculum of The Odin Project.
         </span>
       </section>
-      <script src="assets/js/game.js"></script>
+      <script src="./assets/js/game.js"></script>
+      <script src="./assets/js/music-player.js"></script>
     </footer>
   </body>
 </html>
