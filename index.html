@@ -60,10 +60,22 @@
       </section>
     </header>
     <main>
-      <section class="box settingsBox"><h2 class="mb-sm">Settings</h2></section>
+      <section class="box settingsBox">
+        <h2 class="mb-sm">Settings</h2>
+        <div class="gridSizeBtns mb-sm">
+          <button id="16grid">16 X 16</button>
+          <button id="24grid">24 X 24</button>
+          <button id="32grid">32 X 32</button>
+          <button id="48grid">48 X 48</button>
+          <button id="64grid">64 X 64</button>
+        </div>
+        <div class="gridSizeBtns">
+          <button id="clearBtn">CLEAR</button>
+        </div>
+      </section>
       <section class="box">
-        <h1 class="mb-sm">Etch a Sketch</h1>
-        <h2>Let's play a game</h2>
+        <h1 class="mb-lg">Etch-a-Sketch</h1>
+        <aside class="sketchBox" id="sketchBox"></aside>
       </section>
     </main>
     <footer class="footer">
@@ -73,6 +85,7 @@
           curriculum of The Odin Project.
         </span>
       </section>
+      <script src="assets/js/game.js"></script>
     </footer>
   </body>
 </html>
